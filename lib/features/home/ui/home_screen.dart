@@ -5,6 +5,29 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Center(
+      child:Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset('assets/images/quiz-logo.png', height: 300,),
+          SizedBox(
+            height: 60,
+          ),
+          Text('Learn Flutter!',style: TextStyle(
+              fontSize: 24,
+              color: Colors.white
+          ),),
+          SizedBox(
+            height: 50,
+          ),
+          OutlinedButton(
+              onPressed: (){}, child: Text('Start Quiz', style: TextStyle(
+              fontSize: 24,
+              color: Colors.white
+          ),))
+
+        ],
+      ) ,
+    );
   }
 }

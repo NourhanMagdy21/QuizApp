@@ -1,20 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'features/home/ui/home_screen.dart';
+import 'package:quiz_app/features/quiz/quiz_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const QuizApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-    );
-  }
-}
