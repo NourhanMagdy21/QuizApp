@@ -1,9 +1,28 @@
 import 'package:flutter/material.dart';
-import '../home/ui/home_screen.dart';
+import 'package:quiz_app/features/home/ui/home_screen.dart';
+import 'package:quiz_app/features/questions/question_screen.dart';
 
-class QuizApp extends StatelessWidget {
+
+class QuizApp extends StatefulWidget {
   const QuizApp({super.key});
 
+  @override
+  State<QuizApp> createState() => _QuizAppState();
+}
+
+class _QuizAppState extends State<QuizApp> {
+  Widget? activeScreen ;
+  @override
+  void initState() {
+    activeScreen = HomeScreen(switchScreen);
+    super.initState();
+  }
+
+  void switchScreen(){
+    setState(() {
+      activeScreen = QuestionScreen();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +37,7 @@ class QuizApp extends StatelessWidget {
                 Colors.purpleAccent,
               ]),
             ),
-            child: HomeScreen()
+            child: activeScreen
         ),
       ),
     );

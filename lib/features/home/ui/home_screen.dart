@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen( this.switchScreen, {super.key});
+  final void Function() switchScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class HomeScreen extends StatelessWidget {
             height: 50,
           ),
           OutlinedButton(
-              onPressed: (){}, child: Text('Start Quiz', style: TextStyle(
+              onPressed: switchScreen, child: Text('Start Quiz', style: TextStyle(
               fontSize: 24,
               color: Colors.white
           ),))
