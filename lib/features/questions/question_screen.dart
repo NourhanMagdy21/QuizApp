@@ -41,7 +41,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
           const SizedBox(
             height: 30,
           ),
-          ...currentQuestion.getShuffledAnswers().map(
+          ...currentQuestion.shuffledAnswers.map(
             (e) {
               return Container(
                   margin: EdgeInsets.all(20),
